@@ -8,6 +8,8 @@ namespace MoodAnalyser
 {
     public class Mood
     {
+        //for check Analyse Mood happy or sad
+        //UC1 / UC2
         public string AnalyseMood(string message)
         {
             if (message.Contains("sad"))
@@ -18,7 +20,6 @@ namespace MoodAnalyser
             {
                 return "happy";
             }
-
-        }
+        }        
     }
 }
