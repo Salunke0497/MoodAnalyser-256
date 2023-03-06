@@ -11,7 +11,7 @@ namespace MoodAnalyser
         public enum MoodExceptionType
         {
             NULL_MOOD,
-            EMPTY_MOOD,
+            //EMPTY_MOOD,
         }
         public MoodExceptionType Type;
         public MoodException(MoodExceptionType Type,string message) : base(message) 

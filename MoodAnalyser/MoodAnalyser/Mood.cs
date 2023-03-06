@@ -22,10 +22,10 @@ namespace MoodAnalyser
         {
             try
             {
-                if (message.Equals(string.Empty))
-                {
-                    throw new MoodException(MoodExceptionType.EMPTY_MOOD, "Message should not be empty");
-                }
+                //if (message.Equals(string.Empty))
+                //{
+                //    throw new MoodException(MoodExceptionType.EMPTY_MOOD, "Message should not be empty");
+                //}
 
                 if (message.Contains("sad"))
                 {

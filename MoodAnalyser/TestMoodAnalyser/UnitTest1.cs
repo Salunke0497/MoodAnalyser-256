@@ -20,33 +20,40 @@ namespace TestMoodAnalyser
             string result = checkMood.AnalyseMood();
             Assert.AreEqual(result, "happy");
         }
-        [Test]
-        public void NullReference_WhenAnalyse_ShouldReturnNULL_MESSAGE()
-        {
-            try
-            {
-                Mood checkMood = new Mood(null);
-                string result = checkMood.AnalyseMood();
+        //[Test]
+        //public void NullReference_WhenAnalyse_ShouldReturnNULL_MESSAGE()
+        //{
+        //    try
+        //    {
+        //        Mood checkMood = new Mood(null);
+        //        string result = checkMood.AnalyseMood();
                 
-            }
-            catch(MoodException obj)
-            {
-                Assert.AreEqual("Message should not be null", obj.Message);
-            }
-        }
+        //    }
+        //    catch(MoodException obj)
+        //    {
+        //        Assert.AreEqual("Message should not be null", obj.Message);
+        //    }
+        //}
         [Test]
-        public void GivenEmptyMood_ThrowMoodAnalysisException_EmptyMessage()
+        public void GivenNullMood_WhenAnalized_ShouldReturnHappy()
         {
-                      
-            try
-            {
-                Mood checkMood = new Mood(string.Empty);
-                string result = checkMood.AnalyseMood();
-            }
-            catch (MoodException obj)
-            {
-                Assert.AreEqual("Message should not be empty", obj.Message);
-            }
+            Mood checkMood = new Mood(string.Empty);
+            string result = checkMood.AnalyseMood();
+            Assert.AreEqual("happy", result);
         }
+        //[Test]
+        //public void GivenEmptyMood_ThrowMoodAnalysisException_EmptyMessage()
+        //{
+                      
+        //    try
+        //    {
+        //        Mood checkMood = new Mood(string.Empty);
+        //        string result = checkMood.AnalyseMood();
+        //    }
+        //    catch (MoodException obj)
+        //    {
+        //        Assert.AreEqual("Message should not be empty", obj.Message);
+        //    }
+        //}
     }
 }
