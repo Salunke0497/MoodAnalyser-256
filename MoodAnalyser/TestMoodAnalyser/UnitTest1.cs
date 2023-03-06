@@ -21,7 +21,7 @@ namespace TestMoodAnalyser
             Assert.AreEqual(result, "happy");
         }
         [Test]
-        public void NullReference_WhenAnalyse_ShouldReturnHappy()
+        public void NullReference_WhenAnalyse_ShouldReturnNULL_MESSAGE()
         {
             try
             {
@@ -32,6 +32,20 @@ namespace TestMoodAnalyser
             catch(MoodException obj)
             {
                 Assert.AreEqual("Message should not be null", obj.Message);
+            }
+        }
+        [Test]
+        public void GivenEmptyMood_ThrowMoodAnalysisException_EmptyMessage()
+        {
+                      
+            try
+            {
+                Mood checkMood = new Mood(string.Empty);
+                string result = checkMood.AnalyseMood();
+            }
+            catch (MoodException obj)
+            {
+                Assert.AreEqual("Message should not be empty", obj.Message);
             }
         }
     }
