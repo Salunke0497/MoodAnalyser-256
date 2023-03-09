@@ -11,6 +11,10 @@ namespace MoodAnalyser
 {
     public class Mood
     {
+        public Mood() //default constructor
+        {
+
+        }
         string message;
         public Mood(string message)
         {
@@ -22,10 +26,10 @@ namespace MoodAnalyser
         {
             try
             {
-                //if (message.Equals(string.Empty))
-                //{
-                //    throw new MoodException(MoodExceptionType.EMPTY_MOOD, "Message should not be empty");
-                //}
+                if (message.Equals(string.Empty))
+                {
+                    throw new MoodException(MoodExceptionType.EMPTY_MOOD, "Message should not be empty");
+                }
 
                 if (message.Contains("sad"))
                 {
