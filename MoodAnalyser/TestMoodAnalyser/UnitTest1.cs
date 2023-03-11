@@ -48,6 +48,7 @@ namespace TestMoodAnalyser
                 Assert.AreEqual("Message should not be empty", obj.Message);
             }
         }
+
         [Test]
         public void GivenMoodAnalyserClassName_ReturnMoodAnalyserObjectoOfThatClass()
         {
